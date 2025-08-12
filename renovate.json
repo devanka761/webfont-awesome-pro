@@ -1,6 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", ":assignAndReview(devanka761)"],
+  "extends": ["config:recommended", ":assignAndReview(devanka761)"],
   "labels": ["dependencies"],
   "assignees": ["devanka761"],
   "packageRules": [
