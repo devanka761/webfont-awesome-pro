@@ -1,0 +1,72 @@
+{
+  "name": "webfont-awesome-pro",
+  "version": "1.0.0",
+  "description": "(Webfont) Font Awesome Pro Downloader",
+  "author": "Devanka761 <contact@devanka.id> (https://devanka.id/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devanka761/webfont-awesome-pro.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devanka761/webfont-awesome-pro/issues"
+  },
+  "homepage": "https://github.com/devanka761/webfont-awesome-pro#readme",
+  "keywords": [
+    "font-awesome-pro", "fontawesomepro", "font-awesome", "fontawesome", "font-awesome-pro-downloader", "font-awesome-downloader", "font", "webfont", "font-face"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/fapro.d.ts",
+        "default": "./dist/module.mjs"
+      },
+      "require": {
+        "types": "./dist/fapro.d.ts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/module.mjs",
+  "types": "dist/fapro.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "engines": {
+    "node": ">=14"
+  },
+  "targets": {
+    "types": {},
+    "module": {},
+    "main": {}
+  },
+  "scripts": {
+    "lint": "eslint --ext .ts && npm run check",
+    "check": "tsc --noEmit",
+    "start": "tsx ./src/local.ts",
+    "clear": "rm -rf dist .parcel-cache",
+    "build": "rm -rf dist .parcel-cache && tsc --emitDeclarationOnly && parcel build src/index.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "nodejs-file-downloader": "^4.13.0",
+    "postcss": "^8.5.5",
+    "postcss-safe-parser": "^7.0.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@parcel/packager-ts": "^2.15.4",
+    "@parcel/transformer-typescript-types": "^2.15.4",
+    "@types/node": "^24.0.8",
+    "@types/postcss-safe-parser": "^5.0.4",
+    "parcel": "^2.15.4",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.0"
+  }
+}
