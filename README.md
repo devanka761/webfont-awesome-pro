@@ -1,24 +1,45 @@
-# Font Awesome Pro - Downloader
+# Font Awesome Pro Plus Downloader
 
-Download the Latest [**Font Awesome Pro**](https://fontawesome.com/) for Free. Get all stylesheets and webfonts into your project easily!
+Use the Latest [**Font Awesome Pro Plus**](https://fontawesome.com/) for Free. Get all stylesheets and webfonts into your project easily!
 
-- Downloader Version: v1.0.0
+- Downloader Version: v1.1.0
 - Font Awesome Pro Version: v7.0.0
 
 ## NOTICE
-**Font Awesome Pro** Downloader was made for educational purposes only!
+**Font Awesome Pro Plus** Downloader was made for educational purposes only!
 
-This downloader provides **Paid version** for the latest official package. It is intended for experimental and **personal use** only. It is **not licensed for commercial** use.
+This downloader provides **Paid (Pro Plus) Version** for the latest official package. It is intended for experimental and **personal use** only. It is **licensed for commercial** use.
 
-To unlock commercial use and get an official product license, please consider to go to the Font Awesome official webiste: https://fontawesome.com/plans
+**DO NOT** use this downloader if you are not the *Creators* or you have not buy the official product from the official website.
+
+To unlock commercial use for your own projects, and get an official product license, please consider to go to the Font Awesome official webiste: https://fontawesome.com/plans
 
 ## SETUP
 
-```shell
+```bash
 npm install webfont-awesome-pro
 ```
 
 ## USAGE
+
+Choose one from the following how you want to use the downloader.
+
+#### Command Line
+```bash
+npx webfapro
+```
+
+#### Script `package.json`
+```javascript
+...
+"scripts": {
+  ...
+  "get-fapro": "webfapro"
+}
+```
+```bash
+npm run get-fapro
+```
 
 #### JavaScript/TypeScript ES Modules - import
 ```javascript
@@ -36,15 +57,8 @@ const { getFapro } = require("webfont-awesome-pro");
 getFapro();
 ```
 
-## QUESTIONS
+## DOWNLOAD PATH
 
-**Download Path Question**
+Once the downloader is running, it will ask you to enter the download path. Type the path where you want to save the assets. It will makes new directory if does not exist. Leave it empty to use default folder `fapro`.
 
-Type the path to save the assets. It will makes new directory if does not exist. Leave it empty to use default folder `fapro`.
-
-Example: `public/fapro`
-
-```
-Enter download path: (fapro) public/fapro
-✅ Stylesheets and webfonts will be downloaded to `public/fapro`
-```
+Example: `public/assets/fapro`

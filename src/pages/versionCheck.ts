@@ -30,7 +30,7 @@ export default async function checkVersion(): Promise<{ fontlist: string[]; useV
   console.log("--------")
   await waittime(1000)
   console.log(" ")
-  console.log(chalk.bgGreen.black(` -- Downloading Version ${curFonts.version} of Font Awesome ${curFonts.version.split(".")[0]} Pro -- `))
+  console.log(chalk.bgGreen.black(` -- Downloading Version ${curFonts.version} of Font Awesome ${curFonts.version.split(".")[0]} Pro Plus -- `))
   await waittime(1000)
   console.log(" ")
   console.log("--------")

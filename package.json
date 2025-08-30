@@ -1,6 +1,6 @@
 {
   "name": "webfont-awesome-pro",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "(Webfont) Font Awesome Pro Downloader",
   "author": "Devanka761 <contact@devanka.id> (https://devanka.id/)",
   "license": "MIT",
@@ -13,7 +13,15 @@
   },
   "homepage": "https://github.com/devanka761/webfont-awesome-pro#readme",
   "keywords": [
-    "font-awesome-pro", "fontawesomepro", "font-awesome", "fontawesome", "font-awesome-pro-downloader", "font-awesome-downloader", "font", "webfont", "font-face"
+    "font-awesome-pro",
+    "fontawesomepro",
+    "font-awesome",
+    "fontawesome",
+    "font-awesome-pro-downloader",
+    "font-awesome-downloader",
+    "font",
+    "webfont",
+    "font-face"
   ],
   "type": "module",
   "exports": {
@@ -38,17 +46,33 @@
     "node": ">=14"
   },
   "targets": {
-    "types": {},
-    "module": {},
-    "main": {}
+    "main": {
+      "source": "src/index.ts"
+    },
+    "module": {
+      "source": "src/index.ts"
+    },
+    "types": {
+      "source": "src/index.ts"
+    },
+    "cli": {
+      "source": "src/webfapro.ts",
+      "outputFormat": "esmodule"
+    }
   },
   "scripts": {
-    "lint": "eslint --ext .ts && npm run check",
-    "check": "tsc --noEmit",
-    "start": "tsx ./src/local.ts",
+    "type-check": "tsc -p . --pretty --noEmit",
+    "lint": "eslint --ext ts --ext tsx --ext js",
+    "format": "prettier --write .",
+    "check": "prettier --check .",
+    "start": "tsx ./src/webfapro.ts",
     "clear": "rm -rf dist .parcel-cache",
-    "build": "rm -rf dist .parcel-cache && tsc --emitDeclarationOnly && parcel build src/index.ts",
-    "prepublishOnly": "npm run build"
+    "build": "npm run format && npm run lint && npm run type-check && rm -rf dist .parcel-cache && tsc --emitDeclarationOnly && parcel build",
+    "prepublishOnly": "npm run build",
+    "getfont": "npx webfapro"
+  },
+  "bin": {
+    "webfapro": "./dist/webfapro.js"
   },
   "dependencies": {
     "chalk": "^5.4.1",
@@ -64,7 +88,6 @@
     "@types/postcss-safe-parser": "^5.0.4",
     "parcel": "^2.15.4",
     "prettier": "^3.5.3",
-    "ts-node": "^10.9.2",
     "tsx": "^4.20.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.34.0"

@@ -19,7 +19,7 @@ async function startDownloader(): Promise<void> {
   await waittime(2000)
   console.log("--------")
   await waittime(1000)
-  console.log(chalk.green(`✅ Font Awesome ${useVer.split(".")[0]} Pro v${useVer} Downloaded Successfully!`))
+  console.log(chalk.green(`✅ Font Awesome ${useVer.split(".")[0]} Pro Plus v${useVer} Downloaded Successfully!`))
   await waittime(1000)
   console.log(chalk.bgGreen.black(" --- DONE --- "))
   await waittime(2000)
