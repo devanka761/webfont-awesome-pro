@@ -2,13 +2,13 @@ import fs from "fs"
 import waittime from "../helper/waittime"
 
 function manageAllCss(useDir: string, cssUrls: string[]): void {
-  const allStyle = cssUrls.map((css) => `@import "./${css}";`).join("\n")
-  fs.writeFileSync(`./${useDir}/css/allstyle.css`, `${allStyle}\n`, "utf-8")
+  const allstyles = cssUrls.map((css) => `@import "./${css}";`).join("\n")
+  fs.writeFileSync(`./${useDir}/css/allstyles.css`, `${allstyles}\n`, "utf-8")
   if (!fs.existsSync(`./${useDir}/scss`)) fs.mkdirSync(`./${useDir}/scss`)
-  fs.writeFileSync(`./${useDir}/scss/allstyle.scss`, `@use "../css/allstyle.css";\n`, "utf-8")
+  fs.writeFileSync(`./${useDir}/scss/allstyles.scss`, `@import "../css/allstyles.css";\n`, "utf-8")
   cssUrls.forEach((css) => {
     const scssDir = `./${useDir}/scss/${css.replace(".css", ".scss")}`
-    const scssContent = `@use "../css/${css}";\n`
+    const scssContent = `@import "../css/${css}";\n`
     fs.writeFileSync(scssDir, scssContent, "utf-8")
   })
 }
