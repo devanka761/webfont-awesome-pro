@@ -2,7 +2,7 @@
 
 Use the Latest [**Font Awesome Pro Plus**](https://fontawesome.com/) for Free. Get all stylesheets and webfonts into your project easily!
 
-- Package Version: v1.2.1
+- Package Version: v1.2.2
 - Font Awesome Pro Version: v7.0.0
 
 ## NOTICE
@@ -92,10 +92,11 @@ import "webfont-awesome-pro/scss/notdog-solid.scss";
 
 ```scss
 // import all font awesome pro plus styles
+// import with scss (support: scss)
 @use "webfont-awesome-pro/scss/allstyles.scss";
-// or traditional import
+// or traditional import (support: scss/css)
 @import "webfont-awesome-pro/scss/allstyles.scss";
-// or even more traditional
+// or even more traditional (support: scss/css)
 @import url("webfont-awesome-pro/scss/allstyles.scss");
 
 // same rule applies for specific styles like the javasript example above
