@@ -5,7 +5,7 @@ import waittime from "../helper/waittime"
 export default async function cssDownload(useVer: string, useDir: string, fontlist: string[]): Promise<string[]> {
   console.log("--------")
   console.log(`🕗 Downloading All Stylesheets`)
-  await waittime(2000)
+  await waittime(1000)
 
   const dir = `${useDir}/css`
 
@@ -15,6 +15,6 @@ export default async function cssDownload(useVer: string, useDir: string, fontli
     await downloadFile(url, dir, progress)
   }
   console.log(chalk.greenBright("✅ Stylesheets Downloaded"))
-  await waittime(2000)
+  await waittime(1000)
   return getDownloaded()
 }

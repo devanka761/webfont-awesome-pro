@@ -39,6 +39,6 @@ export default async function checkVersion(): Promise<{ fontlist: string[]; useV
   await waittime(500)
   const fontlist = curFonts.css.map((file) => `${curFonts.root}/css/${file}`)
   console.log("✅ Found " + chalk.green(fontlist.length.toString()) + " Sytlesheets")
-  await waittime(2000)
+  await waittime(1000)
   return { fontlist, useVer: curFonts.version, baseUrl: curFonts.root }
 }

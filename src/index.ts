@@ -16,13 +16,13 @@ async function startDownloader(): Promise<void> {
   const cssUrls: string[] = await cssDownload(useVer, useDir, fontlist)
   const fontUrls: string[] = await readFonts(cssUrls, useDir)
   await downloadFonts(fontUrls, useDir, baseUrl)
-  await waittime(2000)
+  await waittime(1000)
   console.log("--------")
   await waittime(1000)
   console.log(chalk.green(`✅ Font Awesome ${useVer.split(".")[0]} Pro Plus v${useVer} Downloaded Successfully!`))
   await waittime(1000)
   console.log(chalk.bgGreen.black(" --- DONE --- "))
-  await waittime(2000)
+  await waittime(1000)
 }
 export function getFontAwesomePro(): void {
   startDownloader()
