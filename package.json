@@ -1,6 +1,6 @@
 {
   "name": "webfont-awesome-pro",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "(Webfont) Font Awesome Pro Downloader",
   "author": "Devanka761 <contact@devanka.id> (https://devanka.id/)",
   "license": "MIT",
@@ -71,8 +71,7 @@
     "start": "tsx ./src/webfapro.ts",
     "clear": "rm -rf dist .parcel-cache",
     "create": "tsx ./src/create/start.ts",
-    "build": "npm run lint && npm run type-check && npm run clear && tsc --emitDeclarationOnly && parcel build && npm run create",
-    "prepublishOnly": "npm run build",
+    "build": "npm run format && npm run lint && npm run type-check && npm run clear && tsc --emitDeclarationOnly && parcel build && npm run create",
     "getfont": "npx webfapro"
   },
   "bin": {
