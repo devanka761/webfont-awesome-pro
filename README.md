@@ -26,13 +26,13 @@ npm install webfont-awesome-pro
 
 Choose one from the following how you want to use the font awesome pro plus.
 
-#### [With Bundler](#bundler-recommended) (recommended)
+#### [With Bundler](#bundler-recommended)
 **Recommended** if you understand how to work with bundlers.
 - via [javascript/typescript](#javascripttypescript-with-bundler) with bundler
 - via [scss/css](#scsscss-with-bundler) with bundler
 
-#### [With Downloader](#downloader-not-recommended)
-Decide the folder to store the font awesome pro plus assets and connect it to your project manually.
+#### [With Downloader](#downloader)
+Recommended if you want to host the font awesome pro plus somewhere and decide the folder to store the font awesome pro plus assets. Then you can connect them to your project manually.
 - via [command line](#command-line)
 - via [script `package.json`](#script-packagejson)
 - via file execution [es modules import](#javascripttypescript-es-modules---import)
@@ -101,7 +101,12 @@ import "webfont-awesome-pro/scss/notdog-solid.scss";
 // same rule applies for specific styles like the javasript example above
 ```
 
-## Downloader (not recommended)
+---
+
+> [!NOTE]
+> These method bellow will download the font awesome pro plus assets directly into your project folder.
+
+## Downloader
 
 You decide the folder to store the font awesome pro plus assets.
 
