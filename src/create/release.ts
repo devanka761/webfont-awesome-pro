@@ -1,14 +1,16 @@
 import fs from "fs"
 import waittime from "../helper/waittime"
 
+const cssFolder = "webfont-awesome-pro/css"
+
 function manageAllCss(useDir: string, cssUrls: string[]): void {
-  const allstyles = cssUrls.map((css) => `@import "./${css}";`).join("\n")
+  const allstyles = cssUrls.map((css) => `@import "${cssFolder}/${css}";`).join("\n")
   fs.writeFileSync(`./${useDir}/css/allstyles.css`, `${allstyles}\n`, "utf-8")
   if (!fs.existsSync(`./${useDir}/scss`)) fs.mkdirSync(`./${useDir}/scss`)
-  fs.writeFileSync(`./${useDir}/scss/allstyles.scss`, `@import "../css/allstyles.css";\n`, "utf-8")
+  fs.writeFileSync(`./${useDir}/scss/allstyles.scss`, `@use "${cssFolder}/allstyles.css";\n`, "utf-8")
   cssUrls.forEach((css) => {
     const scssDir = `./${useDir}/scss/${css.replace(".css", ".scss")}`
-    const scssContent = `@import "../css/${css}";\n`
+    const scssContent = `@use "${cssFolder}/${css}";\n`
     fs.writeFileSync(scssDir, scssContent, "utf-8")
   })
 }

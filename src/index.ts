@@ -1,4 +1,3 @@
-import chalk from "chalk"
 import waittime from "./helper/waittime"
 import askQuestion from "./pages/askQuestions"
 import cssDownload from "./pages/cssDownload"
@@ -19,9 +18,9 @@ async function startDownloader(): Promise<void> {
   await waittime(1000)
   console.log("--------")
   await waittime(1000)
-  console.log(chalk.green(`✅ Font Awesome ${useVer.split(".")[0]} Pro Plus v${useVer} Downloaded Successfully!`))
+  console.log(`✅ Font Awesome ${useVer.split(".")[0]} Pro Plus v${useVer} Downloaded Successfully!`)
   await waittime(1000)
-  console.log(chalk.bgGreen.black(" --- DONE --- "))
+  console.log("DONE")
   await waittime(1000)
 }
 export function getFontAwesomePro(): void {

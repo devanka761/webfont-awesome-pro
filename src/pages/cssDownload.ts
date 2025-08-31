@@ -1,4 +1,3 @@
-import chalk from "chalk"
 import { downloadFile, getDownloaded } from "../main/file-downloader"
 import waittime from "../helper/waittime"
 
@@ -14,7 +13,7 @@ export default async function cssDownload(useVer: string, useDir: string, fontli
     const progress = `[${i + 1}/${fontlist.length}]`
     await downloadFile(url, dir, progress)
   }
-  console.log(chalk.greenBright("✅ Stylesheets Downloaded"))
+  console.log("✅ Stylesheets Downloaded")
   await waittime(1000)
   return getDownloaded()
 }

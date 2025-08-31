@@ -1,5 +1,4 @@
 import fs from "fs"
-import chalk from "chalk"
 import waittime from "../helper/waittime"
 import cssDownload from "../pages/cssDownload"
 import { downloadFonts, readFonts } from "../pages/fontsDownload"
@@ -20,11 +19,11 @@ async function startDownloader(): Promise<void> {
   await downloadFonts(fontUrls, useDir, baseUrl)
   await waittime(1000)
   await createRelease(useDir, cssUrls)
-  console.log(chalk.green(`✅ Font Awesome ${useVer.split(".")[0]} Pro Plus v${useVer} is Ready!`))
+  console.log(`✅ Font Awesome ${useVer.split(".")[0]} Pro Plus v${useVer} is Ready!`)
   await waittime(1000)
   console.log("--------")
   console.log(" ")
-  console.log(chalk.bgGreen.black(" --- DONE --- "))
+  console.log("DONE")
   await waittime(1000)
 }
 
