@@ -2,7 +2,7 @@
 
 Use the Latest [**Font Awesome Pro Plus**](https://fontawesome.com/) for Free. Get all stylesheets and webfonts into your project easily!
 
-- Package Version: v1.2.0
+- Package Version: v1.2.1
 - Font Awesome Pro Version: v7.0.0
 
 ## NOTICE

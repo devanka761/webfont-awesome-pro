@@ -2,7 +2,6 @@ import { addDir } from "../main/dir-checker"
 import waittime from "../helper/waittime"
 import { extractFont, getFonts } from "../main/font-extractor"
 import { downloadFile } from "../main/file-downloader"
-import chalk from "chalk"
 
 export async function readFonts(sheets: string[], useDir: string): Promise<string[]> {
   console.log("--------")
@@ -12,7 +11,7 @@ export async function readFonts(sheets: string[], useDir: string): Promise<strin
     await extractFont(sheet, dir)
   }
   const fonts = getFonts()
-  console.log("✅ Found " + chalk.green(fonts.length.toString()) + " Webfonts")
+  console.log("✅ Found " + fonts.length.toString() + " Webfonts")
   await waittime(1000)
   return fonts
 }
@@ -29,5 +28,5 @@ export async function downloadFonts(fonts: string[], filedir: string, baseUrl: s
     const progress = `[${i + 1}/${fonts.length}]`
     await downloadFile(url, dir, progress)
   }
-  console.log(chalk.greenBright("✅ Webfonts Downloaded"))
+  console.log("✅ Webfonts Downloaded")
 }
