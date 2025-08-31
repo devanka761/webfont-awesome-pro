@@ -13,7 +13,7 @@ export async function readFonts(sheets: string[], useDir: string): Promise<strin
   }
   const fonts = getFonts()
   console.log("✅ Found " + chalk.green(fonts.length.toString()) + " Webfonts")
-  await waittime(2000)
+  await waittime(1000)
   return fonts
 }
 export async function downloadFonts(fonts: string[], filedir: string, baseUrl: string): Promise<void> {
@@ -22,7 +22,7 @@ export async function downloadFonts(fonts: string[], filedir: string, baseUrl: s
   const fonturl = baseUrl
   console.log("--------")
   console.log("🕗 Downloading All Webfonts")
-  await waittime(2000)
+  await waittime(1000)
   for (let i = 0; i < fonts.length; i++) {
     const font = fonts[i].replace("..", "")
     const url = `${fonturl}${font}`

@@ -1,20 +1,22 @@
-# Font Awesome Pro Plus Downloader
+# Font Awesome Pro Plus
 
 Use the Latest [**Font Awesome Pro Plus**](https://fontawesome.com/) for Free. Get all stylesheets and webfonts into your project easily!
 
-- Downloader Version: v1.1.0
+- Package Version: v1.1.1
 - Font Awesome Pro Version: v7.0.0
 
 ## NOTICE
-**Font Awesome Pro Plus** Downloader was made for educational purposes only!
+**Font Awesome Pro Plus** was made for educational purposes only!
 
-This downloader provides **Paid (Pro Plus) Version** for the latest official package. It is intended for experimental and **personal use** only. It is **licensed for commercial** use.
+This package provides **Paid (Pro Plus) Version** for the latest official package. It is intended for experimental and **personal use** only. It is **licensed for commercial** use.
 
-**DO NOT** use this downloader if you are not the *Creators* or you have not buy the official product from the official website.
+**DO NOT** use this package if you are not the *Creators* or you have not buy the official product from the official website.
 
 To unlock commercial use for your own projects, and get an official product license, please consider to go to the Font Awesome official webiste: https://fontawesome.com/plans
 
 ## SETUP
+
+Install the package
 
 ```bash
 npm install webfont-awesome-pro
@@ -22,14 +24,98 @@ npm install webfont-awesome-pro
 
 ## USAGE
 
-Choose one from the following how you want to use the downloader.
+Choose one from the following how you want to use the font awesome pro plus.
 
-#### Command Line
+#### [With Bundler](#bundler-recommended)
+**Recommended** if you understand how to work with bundlers.
+- via [javascript/typescript](#javascripttypescript-with-bundler) with bundler
+- via [scss/css](#scsscss-with-bundler) with bundler
+
+#### [With Downloader](#downloader)
+Recommended if you want to host the font awesome pro plus somewhere and decide the folder to store the font awesome pro plus assets. Then you can connect them to your project manually.
+- via [command line](#command-line)
+- via [script `package.json`](#script-packagejson)
+- via file execution [es modules import](#javascripttypescript-es-modules---import)
+- via file execution [commonjs require](#javascripttypescript-commonjs---require)
+
+## Bundler (recommended)
+
+You can use some bundlers such as webpack, parcel, etc.
+
+### JavaScript/TypeScript with bundler
+> [!TIP]
+> This is the most effective way
+
+**All styles**
+```javascript
+// import all font awesome pro plus styles
+
+// with .scss
+import "webfont-awesome-pro/scss/allstyles.scss";
+// with .css
+import "webfont-awesome-pro/css/allstyles.css";
+
+// or traditional import
+import("webfont-awesome-pro/scss/allstyles.scss")
+
+// your code
+document.body.innerHTML = `
+  <p>Look at these icons!</p>
+  <i class="fa-sharp-duotone fa-solid fa-user-secret"></i>
+`;
+
+```
+
+**Specific styles**
+```javascript
+// or if you want to import specific
+// font awesome pro plus styles
+// make sure to always import
+// the 'fontawesome.scss' (or .css)
+// before other styles
+import "webfont-awesome-pro/scss/fontawesome.scss";
+
+// then the primary styles
+import "webfont-awesome-pro/scss/solid.scss";
+import "webfont-awesome-pro/scss/regular.scss";
+import "webfont-awesome-pro/scss/duotone.scss";
+import "webfont-awesome-pro/scss/sharp-solid.scss";
+import "webfont-awesome-pro/scss/sharp-duotone-solid.scss";
+
+// then the additional styles
+import "webfont-awesome-pro/scss/chisel-regular.scss";
+import "webfont-awesome-pro/scss/etch-solid.scss";
+import "webfont-awesome-pro/scss/notdog-solid.scss";
+```
+
+### SCSS/CSS with bundler
+
+```scss
+// import all font awesome pro plus styles
+@use "webfont-awesome-pro/scss/allstyles.scss";
+// or traditional import
+@import "webfont-awesome-pro/scss/allstyles.scss";
+// or even more traditional
+@import url("webfont-awesome-pro/scss/allstyles.scss");
+
+// same rule applies for specific styles like the javasript example above
+```
+
+---
+
+> [!NOTE]
+> These method bellow will download the font awesome pro plus assets directly into your project folder.
+
+## Downloader
+
+You decide the folder to store the font awesome pro plus assets.
+
+### Command Line
 ```bash
 npx webfapro
 ```
 
-#### Script `package.json`
+### Script `package.json`
 ```javascript
 ...
 "scripts": {
@@ -41,7 +127,7 @@ npx webfapro
 npm run get-fapro
 ```
 
-#### JavaScript/TypeScript ES Modules - import
+### JavaScript/TypeScript ES Modules - import
 ```javascript
 import { getFapro } from "webfont-awesome-pro";
 
@@ -49,16 +135,10 @@ import { getFapro } from "webfont-awesome-pro";
 getFapro();
 ```
 
-#### JavaScript/TypeScript CommonJS - require
+### JavaScript/TypeScript CommonJS - require
 ```javascript
 const { getFapro } = require("webfont-awesome-pro");
 
 // start the downloader
 getFapro();
 ```
-
-## DOWNLOAD PATH
-
-Once the downloader is running, it will ask you to enter the download path. Type the path where you want to save the assets. It will makes new directory if does not exist. Leave it empty to use default folder `fapro`.
-
-Example: `public/assets/fapro`
