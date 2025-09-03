@@ -1,1 +1,35 @@
-{ "version": "7.0.0", "root": "https://site-assets.fontawesome.com/releases/v7.0.0", "css": ["fontawesome.css", "whiteboard-semibold.css", "thumbprint-light.css", "slab-press-regular.css", "slab-regular.css", "sharp-duotone-thin.css", "sharp-duotone-solid.css", "sharp-duotone-regular.css", "sharp-duotone-light.css", "sharp-thin.css", "sharp-solid.css", "sharp-regular.css", "sharp-light.css", "notdog-duo-solid.css", "notdog-solid.css", "jelly-fill-regular.css", "jelly-duo-regular.css", "jelly-regular.css", "etch-solid.css", "duotone-thin.css", "duotone.css", "duotone-regular.css", "duotone-light.css", "thin.css", "solid.css", "regular.css", "light.css", "brands.css", "chisel-regular.css"] }
+{
+  "version": "7.0.1",
+  "root": "https://site-assets.fontawesome.com/releases/v7.0.1",
+  "css": [
+    "fontawesome.css",
+    "whiteboard-semibold.css",
+    "thumbprint-light.css",
+    "slab-press-regular.css",
+    "slab-regular.css",
+    "sharp-duotone-thin.css",
+    "sharp-duotone-solid.css",
+    "sharp-duotone-regular.css",
+    "sharp-duotone-light.css",
+    "sharp-thin.css",
+    "sharp-solid.css",
+    "sharp-regular.css",
+    "sharp-light.css",
+    "notdog-duo-solid.css",
+    "notdog-solid.css",
+    "jelly-fill-regular.css",
+    "jelly-duo-regular.css",
+    "jelly-regular.css",
+    "etch-solid.css",
+    "duotone-thin.css",
+    "duotone.css",
+    "duotone-regular.css",
+    "duotone-light.css",
+    "thin.css",
+    "solid.css",
+    "regular.css",
+    "light.css",
+    "brands.css",
+    "chisel-regular.css"
+  ]
+}
