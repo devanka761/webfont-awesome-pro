@@ -1,9 +1,12 @@
 {
-  "version": "7.0.1",
-  "root": "https://site-assets.fontawesome.com/releases/v7.0.1",
+  "version": "7.1.0",
+  "root": "https://site-assets.fontawesome.com/releases/v7.1.0",
   "css": [
     "fontawesome.css",
     "whiteboard-semibold.css",
+    "utility-fill-semibold.css",
+    "utility-duo-semibold.css",
+    "utility-semibold.css",
     "thumbprint-light.css",
     "slab-press-regular.css",
     "slab-regular.css",
