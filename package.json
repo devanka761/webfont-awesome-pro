@@ -1,6 +1,6 @@
 {
   "name": "webfont-awesome-pro",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "(Webfont) Font Awesome Pro Downloader",
   "author": "Devanka761 <contact@devanka.id> (https://devanka.id/)",
   "license": "MIT",
@@ -84,7 +84,7 @@
     "postcss-safe-parser": "^7.0.1"
   },
   "devDependencies": {
-    "@eslint/js": "^9.28.0",
+    "@eslint/js": "^10.0.0",
     "@parcel/packager-ts": "^2.15.4",
     "@parcel/transformer-typescript-types": "^2.15.4",
     "@types/node": "^24.0.8",

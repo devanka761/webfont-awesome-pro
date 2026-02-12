@@ -1,9 +1,13 @@
 # Font Awesome Pro Plus
 
+```bash
+npm install --save-exact webfont-awesome-pro
+```
+
 Use the Latest [**Font Awesome Pro Plus**](https://fontawesome.com/) for Free. Get all stylesheets and webfonts into your project easily!
 
-- Package Version: v1.2.4
-- Font Awesome Pro Version: v7.1.0
+- Package Version: v1.2.5
+- Font Awesome Pro Version: v7.2.0
 
 ## NOTICE
 **Font Awesome Pro Plus** was made for educational purposes only!
@@ -16,10 +20,10 @@ To unlock commercial use for your own projects, and get an official product lice
 
 ## SETUP
 
-Install the package
+Install the package (recommended using the exact same version)
 
 ```bash
-npm install webfont-awesome-pro
+npm install --save-exact webfont-awesome-pro
 ```
 
 ## USAGE
@@ -48,13 +52,13 @@ You can use some bundlers such as webpack, parcel, etc.
 
 **All styles**
 ```javascript
+// example-style.ts or example.js
 // import all font awesome pro plus styles
 
 // with .scss
 import "webfont-awesome-pro/scss/allstyles.scss";
 // with .css
 import "webfont-awesome-pro/css/allstyles.css";
-
 // or traditional import
 import("webfont-awesome-pro/scss/allstyles.scss")
 
@@ -91,7 +95,9 @@ import "webfont-awesome-pro/scss/notdog-solid.scss";
 ### SCSS/CSS with bundler
 
 ```scss
+// example-main.scss or example-main.css
 // import all font awesome pro plus styles
+
 // import with scss (support: scss)
 @use "webfont-awesome-pro/scss/allstyles.scss";
 // or traditional import (support: scss/css)
@@ -104,10 +110,10 @@ import "webfont-awesome-pro/scss/notdog-solid.scss";
 
 ---
 
+## Downloader (Not Recommended)
+
 > [!NOTE]
 > These method bellow will download the font awesome pro plus assets directly into your project folder.
-
-## Downloader
 
 You decide the folder to store the font awesome pro plus assets.
 
