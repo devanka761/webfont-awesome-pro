@@ -1,0 +1,6 @@
+node_modules
+.parcel-cache
+dist
+ex
+package-lock.json
+temp
